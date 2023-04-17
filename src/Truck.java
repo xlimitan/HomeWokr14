@@ -1,13 +1,16 @@
-public class Truck extends Bicycle {
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+public class Truck extends Car {
+
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 
-    public Truck(String modelName, int wheelsCount) {
-        super(modelName, wheelsCount);
+    @Override
+    public void service() {
+        super.service();
+        checkTrailer();
     }
 }
